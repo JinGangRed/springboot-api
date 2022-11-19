@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>application</module>
+        <module>open-api</module>
+        <module>infrastructure</module>
+        <module>domain</module>
+        <module>security</module>
+    </modules>
+
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.7.2</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>start-love</artifactId>
+    <groupId>com.lover</groupId>
+    <packaging>pom</packaging>
+    <version>0.0.1</version>
+    <name>Start Love</name>
+    <description>相亲项目</description>
+    <properties>
+        <java.version>17</java.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <springdoc.version>1.6.12</springdoc.version>
+        <jwt.version>0.9.1</jwt.version>
+    </properties>
+    <dependencies>
+        <!--Spring Boot Web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                   <configuration>
+                       <fork>true</fork>
+                   </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
